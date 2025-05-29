@@ -23,6 +23,7 @@ guessBtn.addEventListener('click', () => {
     } else {
         message.textContent = 'Please enter a valid number.';
     }
+    guessInput.value = ''; // Clear input after each guess
 });
 
 resetBtn.addEventListener('click', () => {
