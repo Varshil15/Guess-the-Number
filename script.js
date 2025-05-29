@@ -34,6 +34,9 @@ resetBtn.addEventListener('click', () => {
     guessBtn.disabled = false;
 });
 
+// Set initial theme toggle text
+themeToggle.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
+
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
