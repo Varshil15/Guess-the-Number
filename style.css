@@ -22,7 +22,7 @@ body {
 .container {
     background: linear-gradient(135deg, rgba(24, 18, 43, 0.98) 60%, rgba(57, 48, 83, 0.98) 100%);
     border-radius: 32px;
-    box-shadow: 0 16px 48px 0 rgba(24, 18, 43, 0.8), 0 4px 16px 0 rgba(120, 80, 220, 0.22);
+    box-shadow: 0 16px 48px 0 #18122Bcc, 0 4px 16px 0 #A084DC55;
     max-width: 520px;
     width: 90vw;
     margin: 0 auto;
@@ -178,14 +178,14 @@ h1 {
     margin-bottom: 32px;
     outline: none;
     transition: border 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 8px #A084DC22;
+    box-shadow: 0 2px 12px #A084DC33, 0 1px 4px #18122B44;
     text-align: center;
     font-weight: 700;
     letter-spacing: 2px;
 }
 .guess-input:focus {
     border: 2.5px solid #A084DC;
-    box-shadow: 0 0 0 4px #A084DC33;
+    box-shadow: 0 0 0 6px #A084DC44, 0 2px 12px #A084DC33;
 }
 
 .button-group {
@@ -205,7 +205,7 @@ h1 {
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 16px #18122B44;
+    box-shadow: 0 4px 16px #18122B88, 0 2px 8px #A084DC55;
     transition: background 0.3s, color 0.3s, transform 0.2s;
     letter-spacing: 1px;
 }
@@ -213,6 +213,7 @@ h1 {
     background: #A084DC;
     color: #18122B;
     transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 8px 24px #A084DC99, 0 4px 16px #18122B88;
 }
 
 #attempts {
@@ -224,7 +225,7 @@ h1 {
 }
 
 .container:hover {
-    box-shadow: 0 12px 36px 0 rgba(120, 80, 220, 0.25), 0 8px 32px 0 rgba(24, 18, 43, 0.8);
+    box-shadow: 0 24px 64px 0 #A084DCbb, 0 8px 32px 0 #18122Bcc;
     transform: translateY(-2px) scale(1.01);
     transition: box-shadow 0.3s, transform 0.3s;
 }
