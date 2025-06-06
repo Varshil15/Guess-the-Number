@@ -16,6 +16,7 @@ guessBtn.addEventListener('click', () => {
     if (userGuess === randomNumber) {
         message.textContent = `🎉 Correct! The number was ${randomNumber}.`;
         guessBtn.disabled = true;
+        guessBtn.style.display = 'none'; // Hide the Guess button
         showCongratsPopup();
     } else if (userGuess < randomNumber) {
         message.textContent = 'Too low! Try again.';
@@ -37,6 +38,7 @@ resetBtn.addEventListener('click', () => {
     message.textContent = 'Enter a number between 1 and 100:';
     guessInput.value = '';
     guessBtn.disabled = false;
+    guessBtn.style.display = '';
 });
 
 // Allow Enter key to trigger guess
