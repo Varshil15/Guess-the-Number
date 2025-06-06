@@ -54,6 +54,9 @@ themeToggle.addEventListener('click', () => {
 guessInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         guessBtn.click();
+        // Add a quick visual feedback to the button
+        guessBtn.classList.add('shake');
+        setTimeout(() => guessBtn.classList.remove('shake'), 300);
     }
 });
 
