@@ -233,3 +233,45 @@ h1 {
         font-size: 1.3rem;
     }
 }
+
+body.light {
+    background: linear-gradient(135deg, #f5f6fa 0%, #e0e0e0 100%);
+    color: #232526;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.light .container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px 0 rgba(180, 180, 180, 0.25);
+}
+
+body.light .theme-toggle {
+    background: #f5f6fa;
+    color: #232526;
+}
+body.light .theme-toggle:hover {
+    background: #ffe082;
+    color: #232526;
+}
+
+body.light .guess-input {
+    background: #f5f6fa;
+    color: #232526;
+    border: 1px solid #bbb;
+}
+body.light .guess-input:focus {
+    border: 1.5px solid #232526;
+}
+
+body.light .main-btn {
+    background: linear-gradient(90deg, #ffe082 0%, #fffde4 100%);
+    color: #232526;
+}
+body.light .main-btn:hover {
+    background: #232526;
+    color: #ffe082;
+}
+
+body.light #attempts {
+    color: #232526;
+}
