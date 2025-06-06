@@ -38,25 +38,15 @@ resetBtn.addEventListener('click', () => {
     guessBtn.disabled = false;
 });
 
-// Set initial theme toggle text
-themeToggle.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
-
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-        themeToggle.textContent = '☀️ Light Mode';
-    } else {
-        themeToggle.textContent = '🌙 Dark Mode';
-    }
-});
-
 // Allow Enter key to trigger guess
+// This will work even if the Guess button is disabled, so check for that
 guessInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !guessBtn.disabled) {
         guessBtn.click();
         // Add a quick visual feedback to the button
+        guessBtn.classList.remove('shake');
+        void guessBtn.offsetWidth;
         guessBtn.classList.add('shake');
-        setTimeout(() => guessBtn.classList.remove('shake'), 300);
     }
 });
 
