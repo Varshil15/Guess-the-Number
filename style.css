@@ -169,17 +169,19 @@ h1 {
 
 .guess-input {
     width: 80%;
-    padding: 18px 20px;
+    padding: 24px 28px;
     border-radius: 14px;
     border: 2px solid #A084DC;
     background: #18122B;
     color: #f5f6fa;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     margin-bottom: 32px;
     outline: none;
     transition: border 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 8px #A084DC22;
     text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 .guess-input:focus {
     border: 2.5px solid #A084DC;
@@ -199,8 +201,8 @@ h1 {
     color: #f5f6fa;
     border: none;
     border-radius: 14px;
-    padding: 18px 48px;
-    font-size: 1.3rem;
+    padding: 12px 32px;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 4px 16px #18122B44;
