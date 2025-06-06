@@ -16,9 +16,7 @@ guessBtn.addEventListener('click', () => {
     if (userGuess === randomNumber) {
         message.textContent = `🎉 Correct! The number was ${randomNumber}.`;
         guessBtn.disabled = true;
-        setTimeout(() => {
-            alert('🎉 Congratulations! You guessed the correct number!');
-        }, 200);
+        showCongratsPopup();
     } else if (userGuess < randomNumber) {
         message.textContent = 'Too low! Try again.';
         shakeOnFail();
@@ -61,4 +59,28 @@ function shakeOnFail() {
     void document.querySelector('.container').offsetWidth;
     guessInput.classList.add('shake');
     document.querySelector('.container').classList.add('shake');
+}
+
+// Add a custom congrats popup
+function showCongratsPopup() {
+    // Remove any existing popup
+    const oldPopup = document.getElementById('congrats-popup');
+    if (oldPopup) oldPopup.remove();
+
+    const popup = document.createElement('div');
+    popup.id = 'congrats-popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <span class="popup-emoji">🎉</span>
+            <h2>Congratulations!</h2>
+            <p>You guessed the correct number!</p>
+            <button id="closePopupBtn">OK</button>
+        </div>
+    `;
+    document.body.appendChild(popup);
+    setTimeout(() => popup.classList.add('show'), 10);
+    document.getElementById('closePopupBtn').onclick = () => {
+        popup.classList.remove('show');
+        setTimeout(() => popup.remove(), 300);
+    };
 }
