@@ -18,10 +18,13 @@ guessBtn.addEventListener('click', () => {
         guessBtn.disabled = true;
     } else if (userGuess < randomNumber) {
         message.textContent = 'Too low! Try again.';
+        shakeOnFail();
     } else if (userGuess > randomNumber) {
         message.textContent = 'Too high! Try again.';
+        shakeOnFail();
     } else {
         message.textContent = 'Please enter a valid number.';
+        shakeOnFail();
     }
     guessInput.value = ''; // Clear input after each guess
 });
@@ -53,3 +56,13 @@ guessInput.addEventListener('keydown', (e) => {
         guessBtn.click();
     }
 });
+
+function shakeOnFail() {
+    guessInput.classList.remove('shake');
+    document.querySelector('.container').classList.remove('shake');
+    // Force reflow to restart animation
+    void guessInput.offsetWidth;
+    void document.querySelector('.container').offsetWidth;
+    guessInput.classList.add('shake');
+    document.querySelector('.container').classList.add('shake');
+}

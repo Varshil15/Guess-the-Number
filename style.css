@@ -230,6 +230,21 @@ h1 {
     transition: box-shadow 0.3s, transform 0.3s;
 }
 
+/* Shake animation for input and card */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-10px); }
+  30% { transform: translateX(10px); }
+  45% { transform: translateX(-8px); }
+  60% { transform: translateX(8px); }
+  75% { transform: translateX(-4px); }
+  90% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+.shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
 @media (max-width: 700px) {
     .container {
         padding: 32px 8vw 24px 8vw;
