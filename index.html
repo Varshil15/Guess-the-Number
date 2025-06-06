@@ -8,13 +8,15 @@
 </head>
 <body class="dark">
     <div class="container">
-        <h1>Guess the Number!</h1>
-        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode </button>
+        <div class="header">
+            <h1>Guess the Number!</h1>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+        </div>
         <p id="message"> Enter a number between 1 and 100: </p>
-        <input type="number" id="guessInput" min="1" max="100">
+        <input type="number" id="guessInput" class="guess-input" min="1" max="100" aria-label="Enter your guess">
         <div class="button-group">
-            <button id="guessBtn" >Guess </button>
-            <button id="resetBtn" >Reset </button>
+            <button id="guessBtn" class="main-btn">Guess</button>
+            <button id="resetBtn" class="main-btn">Reset</button>
         </div>
         <p id="attempts">Attempts: 0 </p>
     </div>

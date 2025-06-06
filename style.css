@@ -112,62 +112,124 @@ button:active {
     margin-top: 0.5rem;
 }
 
-/* Dark mode styles */
+/* Modern dark background and light font for aesthetic look */
 body.dark {
-    --bg-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
-    --container-bg: #23272f;
-    --text-color: #f1f1f1;
-    --input-bg: #23272f;
-    --input-border: #444;
-    --button-bg: linear-gradient(90deg, #232526 60%, #414345 100%);
-    --button-hover-bg: linear-gradient(90deg, #414345 60%, #232526 100%);
-    --attempts-color: #bbb;
-}
-body.dark h1 {
-    color: #00c6ff;
-}
-body.dark .theme-toggle {
-    color: #00c6ff;
-    border-color: #00c6ff;
-}
-body.dark .theme-toggle:hover {
-    background: #00c6ff;
-    color: #232526;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #f5f6fa;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s, color 0.5s;
 }
 
-/* Responsive styles for mobile */
-@media (max-width: 600px) {
+.container {
+    background: rgba(30, 30, 40, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    padding: 36px 32px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    background: #232526;
+    color: #f5f6fa;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.theme-toggle:hover {
+    background: #414345;
+    color: #ffe082;
+}
+
+#message {
+    margin: 18px 0 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.guess-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #232526;
+    color: #f5f6fa;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    outline: none;
+    transition: border 0.3s;
+}
+.guess-input:focus {
+    border: 1.5px solid #ffe082;
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.main-btn {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #f5f6fa;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.main-btn:hover {
+    background: #ffe082;
+    color: #232526;
+    transform: translateY(-2px) scale(1.04);
+}
+
+#attempts {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffe082;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 500px) {
     .container {
-        min-width: unset;
-        width: 95vw;
-        padding: 1.2rem 0.5rem;
-        border-radius: 12px;
+        padding: 18px 8px 16px 8px;
+        max-width: 98vw;
+    }
+    .header {
+        flex-direction: column;
+        gap: 10px;
     }
     h1 {
-        font-size: 1.4rem;
-    }
-    input[type="number"] {
-        width: 60vw;
-        max-width: 160px;
-        font-size: 1rem;
-    }
-    .button-group {
-        flex-direction: column;
-        gap: 0.7rem;
-        margin-bottom: 0.7rem;
-    }
-    button, .theme-toggle {
-        width: 90vw;
-        max-width: 220px;
-        font-size: 1rem;
-        padding: 0.7rem 0;
-    }
-    .theme-toggle {
-        position: static;
-        margin-bottom: 1rem;
-        margin-top: 0.5rem;
-    }
-    #message, #attempts {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 }
