@@ -1,6 +1,6 @@
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
-
+console.log(`Random number (for debugging): ${randomNumber}`); // For debugging purposes
 const guessInput = document.getElementById('guessInput');
 const guessBtn = document.getElementById('guessBtn');
 const resetBtn = document.getElementById('resetBtn');
@@ -16,6 +16,9 @@ guessBtn.addEventListener('click', () => {
     if (userGuess === randomNumber) {
         message.textContent = `🎉 Correct! The number was ${randomNumber}.`;
         guessBtn.disabled = true;
+        setTimeout(() => {
+            alert('🎉 Congratulations! You guessed the correct number!');
+        }, 200);
     } else if (userGuess < randomNumber) {
         message.textContent = 'Too low! Try again.';
         shakeOnFail();

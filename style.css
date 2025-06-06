@@ -9,7 +9,7 @@
     --attempts-color: #A084DC;
 }
 body {
-    background: linear-gradient(135deg, #18122B 0%, #393053 100%);
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
     color: #f5f6fa;
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
     min-height: 100vh;
